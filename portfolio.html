@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width,initial-scale= 1.0">
+
+  <title>Responsive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #F6F4F0;
+      font-family: kanit;
+      line-height: 1.6;
+      color: black;
+      text-align: center;
+      size: 200%;
+    }
+
+    h2 {
+      color: #001A6E;
+      font-size: 300%;
+    }
+
+    header h2 {
+      font-size: 100;
+      font-style: italic;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #001A6E;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      width: 70%;
+      border-radius: 40px;
+      margin: 2% 17%;
+    }
+
+
+    nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    #home {
+      margin: 8rem auto;
+      background-color: #bdcafb;
+      color: black;
+      padding: 8rem 4%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 90%;
+      border-radius: 50px;
+    }
+
+
+    #home h1 {
+      font-size: 500%;
+      margin-left: 4%;
+      margin-bottom: 2%;
+      line-height: 1;
+      color: #001A6E;
+    }
+
+    #home p {
+      margin: 4% 4%;
+      line-height: 1.6;
+      font-size: 130%;
+    }
+
+    .profile-pic {
+      align-content: center;
+      max-height: 350px;
+      max-width: 300px;
+      border-radius: 20%;
+      box-shadow: 2px 5px 15px #12263d;
+    }
+
+    #about {
+      margin: 2% 6%;
+      padding: 7rem 4rem;
+      font-size: 180%;
+
+    }
+
+    #about h3 {
+      text-decoration: underline;
+      color: rgb(60, 35, 4);
+    }
+
+    .education {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 3rem auto;
+    }
+
+    .edu_item {
+      background-color: #c4d0fe;
+      border-radius: 20px;
+      box-shadow: 5px 8px 1px #12263d;
+      margin: 12px;
+      padding: 1%;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    #skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2% 6%;
+      padding: 7rem 4rem;
+      font-size: 180%;
+
+    }
+
+    .tech {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      justify-content: center;
+      margin: 3%;
+    }
+
+    .skills_item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 4px 8px 0px #001A6E;
+      background-color: #bdcafb;
+      color: black;
+      border-radius: 20px;
+      max-width: 170px;
+      max-height: 175px;
+      box-sizing: border-box;
+      margin-top: 3%;
+      padding: 2%;
+      transition: all 0.3s ease;
+    }
+
+    .skills_item:hover {
+      transform: scale(1.1);
+      background-color: #001A6E;
+      box-shadow: 6px 10px 0px #bdcafb;
+      color: #F6F4F0;
+      cursor: pointer;
+    }
+
+    .skills_item img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+      padding: 0;
+      margin: 0;
+    }
+
+    #projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2% 6%;
+      padding: 7rem 4rem;
+      line-height: 1.5;
+    }
+
+    .phead {
+      font-size: 90px;
+    }
+
+    .proj {
+      display: flex;
+      justify-content: center;
+      gap: 3%;
+      margin-top: 5%;
+
+    }
+
+    .project-item {
+      background-color: #c4d0fe;
+      width: 30%;
+      border: 2px solid #001A6E;
+      box-shadow: 8px 8px 10px;
+      border-radius: 40px;
+    }
+
+    .project-item h3 {
+      font-size: 150%;
+      margin-top: 10%;
+      line-height: 1.2;
+      margin: 10% 9% 0;
+      color: #001A6E;
+    }
+
+    .project-item p {
+      margin-top: 5%;
+      font-size: 110%;
+      max-width: 85%;
+      margin-left: 8%;
+    }
+
+    .project-item video {
+      margin: 9% 0;
+      border-radius: 20px;
+      box-shadow: 3px 5px 7px black;
+    }
+
+    .cinfo {
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <img src="disha.jpg" alt="Profile pic" class="profile-pic">
+    <div class="profile">
+      <h1>Hello,<br>I'm Disha Patil</h1>
+      <p>
+        I am currently pursuing a degree in Computer Science and Engineering (CSE) with a specialization in
+        Artificial Intelligence and Machine Learning (AIML).
+        I am passionate about exploring the limitless possibilities of AI, building innovative solutions, and
+        solving
+        real-world problems through technology.
+      </p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="edu_item">
+        <h3>10th CBSE Board</h3>
+        <p>Podar International School, Wagholi, Pune</p>
+        <p>96.60%</p>
+      </div>
+
+      <div class="edu_item">
+        <h3>12th HSC Board</h3>
+        <p>Bhogavati Mahavidyalaya, Kolhapur</p>
+        <p>72%</p>
+      </div>
+
+      <div class="edu_item">
+        <h3>BTech Engineering</h3>
+        <p>Vishwakarma Institute Of Information Technology, Kondhwa</p>
+        <p>FY Completed (CGPA) - 8.55</p>
+        <p>SY Pursuing (SGPA) - 9.14</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Tech Stack</h2>
+    <div class="tech">
+      <div class="skills_item">
+        <p>C++</p>
+        <img src="cpp_logo.png" alt="CPP Logo">
+      </div>
+      <div class="skills_item">
+        <p>Java</p>
+        <img src="java_logo.png" alt="Java Logo">
+      </div>
+      <div class="skills_item">
+        <p>DSA</p>
+        <img src="DSA_logo.png" alt="DSA Logo">
+      </div>
+      <div class="skills_item">
+        <p>Python</p>
+        <img src="python_logo.png" alt="Python Logo">
+      </div>
+      <!-- <div class="skills_item">
+        <p>Machine Learning</p>
+        <img src="ML_logo.jpg" alt="Machine Learning Logo">
+      </div> -->
+      <div class="skills_item">
+        <p>Html</p>
+        <img src="HTML_logo.png" alt="HTML Logo">
+      </div>
+      <div class="skills_item">
+        <p>CSS</p>
+        <img src="CSS_logo.png" alt="CSS Logo">
+      </div>
+    </div>
+  </section>
+
+  <div id="projects">
+    <h2 class="phead">My Projects</h2>
+    <div class="proj">
+      <div class="project-item">
+        <h3>Project 1 <br>Hogwarts Chronicles: A Harry Potter fanpage(HTML + CSS)</h3>
+        <p>Created a basic Harry Potter-themed website using HTML and CSS, featuring interactive pages with Famous
+          characters, images, Trailers, House points table</p>
+
+        <h3>Project 2 <br>Vending Machine Simulation(DSA)</h3>
+        <p>Working of a vending machine by implementing the stack data structure to manage its operations efficiently.
+        </p>
+      </div>
+      <div class="project-item">
+        <h3>Project 3 <br>Inora: A chatbot for student assistance</h3>
+        <p>A smart, AI-powered chatbot designed to assist students with admission queries, provide personalized
+          guidance, and simplify access to academic and administrative information.</p>
+        <video controls width="300" autoplay muted>
+          <source src="inora_video.mp4">
+        </video>
+      </div>
+      <div class="project-item">
+        <h3>Project 4 <br>Smart Expense Tracker (Java + DSA)</h3>
+        <p>A Java-based application that efficiently tracks daily expenses using data structures for quickcategory-based
+          insights and sorting for monthly analysis</p>
+
+        <h3>Project 5 <br>Movie Recommendation System (Python + ML)</h3>
+        <p>A Python-powered project that suggests movies based on user preferences using collaborative filtering and
+          content-based algorithms.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2>Contact Me <img src="contact.png" height="30px" width="30px"></h2>
+    <div class="cinfo">
+      <h3><img src="gmail_logo.png" height="20px" width="20px"> MAIL</h3>
+      <p>patildisha2404@gmail.com</p>
+      <h3><img src="linkedin.png" height="20px" width="20px"> LINKEDIN</h3>
+      <p><a href="https://www.linkedin.com/in/disha-patil-290b26295" target="_blank">@disha-patil-290b26295</a></p>
+      <h3><img src="instagram_logo.png" alt="Instagram logo" height="20px" width="20px"> INSTAGRAM</h3>
+      <p>disha._.24</p>
+    </div>
+  </section>
+
+</body>
+
+</html>
